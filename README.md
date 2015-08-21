@@ -70,6 +70,7 @@ curl localhost:8080/incorrect-path
 | HTTP | Path            | Content       |
 |------|-----------------|---------------|
 | GET  | /               | index.html    |
+| GET  | /index.html     | index.html    |
 | GET  | /hydrogen.html  | hydrogen.html |
 | GET  | /helium.html    | helium.html   |
 | GET  | /404.html       | 404.html      |
@@ -104,8 +105,8 @@ _hint: use the `If-Modified-Since` request header_
 
 ### Goals
 
-The main client file is `client.js`.  
-The client will run once, then exit.  
+The main client file is `client.js`.
+The client will run once, then exit.
 
 1. Create a client to establish TCP socket connections to HTTP servers
 1. The node command requires a single argument, the host and uri to request a resource from
@@ -163,7 +164,7 @@ Allow the client to send a valid POST request with a message body to a server.
 
 ### 2Advanced Client
 
-Allow CLI Option to save the response message body as a file specified by the client.  
+Allow CLI Option to save the response message body as a file specified by the client.
 For example:
 
 ```
